@@ -161,10 +161,15 @@ class PositionCalculator:
                 ratio = svar / portfolio_var
                 sector_ratios[sector] = ratio
                 if ratio > 0.40:
+                    # 线性缩减近似：要使板块占比降至 40%，大致需要缩减的乘数 gamma
+                    # 注意：这是对板块整体头寸的一阶近似缩减系数
+                    gamma = (0.40 * portfolio_var) / svar
+                    reduction_pct = (1 - gamma) * 100
                     sector_warnings.append({
                         'sector': sector,
                         'ratio': ratio,
-                        'message': f"板块 '{sector}' 的风险贡献占比达到 {ratio*100:.2f}%，超过 40% 的风控上限！建议减仓。"
+                        'reduction_factor': 1 - gamma,
+                        'message': f"板块 '{sector}' 的风险贡献占比达到 {ratio*100:.2f}%，超过 40% 的风控上限！建议该板块内所有多头/空头头寸同步削减约 {reduction_pct:.1f}% 的手数。"
                     })
                     
         return {
@@ -189,11 +194,17 @@ class PositionCalculator:
             sym = sym.upper()
             if sym in corr_matrix.columns and sym != target_symbol:
                 corr = corr_matrix.loc[target_symbol, sym]
-                if abs(corr) > threshold:
+                abs_corr = abs(corr)
+                if abs_corr > threshold:
+                    # 动态折算惩罚系数：在 threshold (如 0.7) 时不惩罚为 1.0，完全相关 1.0 时惩罚一半 (0.5)
+                    # 线性插值公式
+                    penalty = 1.0 - ((abs_corr - threshold) / (1.0 - threshold)) * 0.5
+                    # 限制最小惩罚系数在 0.5
+                    penalty = max(0.5, min(1.0, penalty))
                     penalties.append({
                         'symbol': sym,
                         'correlation': corr,
-                        'penalty_factor': 0.5 if corr > 0.8 else 0.7  # 根据相关性极值给出简单的折算惩罚建议
+                        'penalty_factor': round(penalty, 2)
                     })
                     
         return penalties
