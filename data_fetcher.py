@@ -44,7 +44,7 @@ SECTOR_MAP = {
     'RU': '农产品', 'NR': '农产品',
     
     # 航运轻工
-    'EC': '航运轻工', 'OP': '航运轻工', 'SP': '航运轻工',
+    'EC': '航运轻工', 'OP': '航运轻工', 'SP': '航运轻工', 'LG': '航运轻工',
 }
 
 def get_trading_hours_info(symbol):
