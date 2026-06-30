@@ -1,6 +1,512 @@
-[2026/06/29 ��һ 19:39:15.12] Starting daily job... 
-Traceback (most recent call last):
-  File "D:\datasci\PNL_Tracker\daily_job.py", line 11, in <module>
-    from data_fetcher import FuturesDataFetcher
-ImportError: cannot import name 'FuturesDataFetcher' from 'data_fetcher' (D:\datasci\PNL_Tracker\data_fetcher.py)
-[2026/06/29 ��һ 19:39:30.79] Done. 
+[2026/06/30 �ܶ� 20:48:26.42] Starting daily job... 
+[2026-06-30 20:48:42.181857] Starting daily sync job...
+Database initialized at: D:\datasci\PNL_Tracker\futures_data.db
+Updating contract metadata with liquidity filter...
+Filter: Open Interest Capital >= 5000.0万 RMB OR Daily Turnover >= 10000.0万 RMB
+Zero price detected for active commodity symbols: ['LC' 'PD' 'PS' 'PT' 'SI']. Fetching prices from Sina...
+  Successfully fixed price for LC: 163360.0
+  Successfully fixed price for PD: 295.1
+  Successfully fixed price for PS: 35325.0
+  Successfully fixed price for PT: 391.5
+  Successfully fixed price for SI: 8385.0
+Total listed commodities (excl. CFFEX): 77, passed liquidity filter: 70
+Successfully stored metadata for 70 active commodity contracts.
+
+Will sync 70 commodity symbols (Daily K-lines).
+For 2H K-lines, we will sync only the 4 representative hour types unless sync_all_2h is True.
+
+[1/70] Syncing A (黄大豆1号) | Sector: 油脂油料
+  Continuous Daily (A0): OK
+  Continuous 2-Hour (A0): SKIPPED (not in 2H test list)
+  Current Main Contract: a2609
+  Main Contract Daily (a2609): OK
+  Main Contract 2-Hour (a2609): SKIPPED (not in 2H test list)
+
+[2/70] Syncing AD (铝合金) | Sector: 有色金属
+  Continuous Daily (AD0): OK
+  Continuous 2-Hour (AD0): SKIPPED (not in 2H test list)
+  Current Main Contract: ad2609
+  Main Contract Daily (ad2609): OK
+  Main Contract 2-Hour (ad2609): SKIPPED (not in 2H test list)
+
+[3/70] Syncing AG (白银) | Sector: 贵金属
+  Continuous Daily (AG0): OK
+  Continuous 2-Hour (AG0): SKIPPED (not in 2H test list)
+  Current Main Contract: ag2608
+  Main Contract Daily (ag2608): OK
+  Main Contract 2-Hour (ag2608): SKIPPED (not in 2H test list)
+
+[4/70] Syncing AL (铝) | Sector: 有色金属
+  Continuous Daily (AL0): OK
+  Continuous 2-Hour (AL0): SKIPPED (not in 2H test list)
+  Current Main Contract: al2608
+  Main Contract Daily (al2608): OK
+  Main Contract 2-Hour (al2608): SKIPPED (not in 2H test list)
+
+[5/70] Syncing AO (氧化铝) | Sector: 有色金属
+  Continuous Daily (AO0): OK
+  Continuous 2-Hour (AO0): SKIPPED (not in 2H test list)
+  Current Main Contract: ao2609
+  Main Contract Daily (ao2609): OK
+  Main Contract 2-Hour (ao2609): SKIPPED (not in 2H test list)
+
+[6/70] Syncing AP (苹果) | Sector: 农产品
+  Continuous Daily (AP0): OK
+  Continuous 2-Hour (AP0): SKIPPED (not in 2H test list)
+  Current Main Contract: AP610
+  Main Contract Daily (AP610): OK
+  Main Contract 2-Hour (AP610): SKIPPED (not in 2H test list)
+
+[7/70] Syncing AU (黄金) | Sector: 贵金属
+  Continuous Daily (AU0): OK
+  Continuous 2-Hour (AU0): SKIPPED (not in 2H test list)
+  Current Main Contract: au2608
+  Main Contract Daily (au2608): OK
+  Main Contract 2-Hour (au2608): SKIPPED (not in 2H test list)
+
+[8/70] Syncing B (黄大豆2号) | Sector: 油脂油料
+  Continuous Daily (B0): OK
+  Continuous 2-Hour (B0): SKIPPED (not in 2H test list)
+  Current Main Contract: b2609
+  Main Contract Daily (b2609): OK
+  Main Contract 2-Hour (b2609): SKIPPED (not in 2H test list)
+
+[9/70] Syncing BC (国际铜) | Sector: 有色金属
+  Continuous Daily (BC0): OK
+  Continuous 2-Hour (BC0): SKIPPED (not in 2H test list)
+  Current Main Contract: bc2608
+  Main Contract Daily (bc2608): OK
+  Main Contract 2-Hour (bc2608): SKIPPED (not in 2H test list)
+
+[10/70] Syncing BR (丁二烯橡胶) | Sector: 能源化工
+  Continuous Daily (BR0): OK
+  Continuous 2-Hour (BR0): SKIPPED (not in 2H test list)
+  Current Main Contract: br2609
+  Main Contract Daily (br2609): OK
+  Main Contract 2-Hour (br2609): SKIPPED (not in 2H test list)
+
+[11/70] Syncing BU (石油沥青) | Sector: 能源化工
+  Continuous Daily (BU0): OK
+  Continuous 2-Hour (BU0): SKIPPED (not in 2H test list)
+  Current Main Contract: bu2609
+  Main Contract Daily (bu2609): OK
+  Main Contract 2-Hour (bu2609): SKIPPED (not in 2H test list)
+
+[12/70] Syncing BZ (纯苯) | Sector: 能源化工
+  Continuous Daily (BZ0): OK
+  Continuous 2-Hour (BZ0): SKIPPED (not in 2H test list)
+  Current Main Contract: bz2608
+  Main Contract Daily (bz2608): OK
+  Main Contract 2-Hour (bz2608): SKIPPED (not in 2H test list)
+
+[13/70] Syncing C (黄玉米) | Sector: 农产品
+  Continuous Daily (C0): OK
+  Continuous 2-Hour (C0): SKIPPED (not in 2H test list)
+  Current Main Contract: c2609
+  Main Contract Daily (c2609): OK
+  Main Contract 2-Hour (c2609): SKIPPED (not in 2H test list)
+
+[14/70] Syncing CF (一号棉花) | Sector: 农产品
+  Continuous Daily (CF0): OK
+  Continuous 2-Hour (CF0): SKIPPED (not in 2H test list)
+  Current Main Contract: CF609
+  Main Contract Daily (CF609): OK
+  Main Contract 2-Hour (CF609): SKIPPED (not in 2H test list)
+
+[15/70] Syncing CJ (红枣) | Sector: 农产品
+  Continuous Daily (CJ0): OK
+  Continuous 2-Hour (CJ0): SKIPPED (not in 2H test list)
+  Current Main Contract: CJ609
+  Main Contract Daily (CJ609): OK
+  Main Contract 2-Hour (CJ609): SKIPPED (not in 2H test list)
+
+[16/70] Syncing CS (玉米淀粉) | Sector: 农产品
+  Continuous Daily (CS0): OK
+  Continuous 2-Hour (CS0): SKIPPED (not in 2H test list)
+  Current Main Contract: cs2609
+  Main Contract Daily (cs2609): OK
+  Main Contract 2-Hour (cs2609): SKIPPED (not in 2H test list)
+
+[17/70] Syncing CU (铜) | Sector: 有色金属
+  Continuous Daily (CU0): OK
+  Continuous 2-Hour (CU0): OK
+  Current Main Contract: cu2608
+  Main Contract Daily (cu2608): OK
+  Main Contract 2-Hour (cu2608): OK
+
+[18/70] Syncing CY (棉纱) | Sector: 农产品
+  Continuous Daily (CY0): OK
+  Continuous 2-Hour (CY0): SKIPPED (not in 2H test list)
+  Current Main Contract: CY609
+  Main Contract Daily (CY609): OK
+  Main Contract 2-Hour (CY609): SKIPPED (not in 2H test list)
+
+[19/70] Syncing EB (苯乙烯) | Sector: 能源化工
+  Continuous Daily (EB0): OK
+  Continuous 2-Hour (EB0): SKIPPED (not in 2H test list)
+  Current Main Contract: eb2608
+  Main Contract Daily (eb2608): OK
+  Main Contract 2-Hour (eb2608): SKIPPED (not in 2H test list)
+
+[20/70] Syncing EC (SCFIS欧线) | Sector: 航运轻工
+  Continuous Daily (EC0): OK
+  Continuous 2-Hour (EC0): SKIPPED (not in 2H test list)
+  Current Main Contract: ec2608
+  Main Contract Daily (ec2608): OK
+  Main Contract 2-Hour (ec2608): SKIPPED (not in 2H test list)
+
+[21/70] Syncing EG (乙二醇) | Sector: 能源化工
+  Continuous Daily (EG0): OK
+  Continuous 2-Hour (EG0): SKIPPED (not in 2H test list)
+  Current Main Contract: eg2609
+  Main Contract Daily (eg2609): OK
+  Main Contract 2-Hour (eg2609): SKIPPED (not in 2H test list)
+
+[22/70] Syncing FG (玻璃) | Sector: 黑色建材
+  Continuous Daily (FG0): OK
+  Continuous 2-Hour (FG0): SKIPPED (not in 2H test list)
+  Current Main Contract: FG609
+  Main Contract Daily (FG609): OK
+  Main Contract 2-Hour (FG609): SKIPPED (not in 2H test list)
+
+[23/70] Syncing FU (燃料油) | Sector: 能源化工
+  Continuous Daily (FU0): OK
+  Continuous 2-Hour (FU0): SKIPPED (not in 2H test list)
+  Current Main Contract: fu2609
+  Main Contract Daily (fu2609): OK
+  Main Contract 2-Hour (fu2609): SKIPPED (not in 2H test list)
+
+[24/70] Syncing HC (热轧卷板) | Sector: 黑色建材
+  Continuous Daily (HC0): OK
+  Continuous 2-Hour (HC0): SKIPPED (not in 2H test list)
+  Current Main Contract: hc2610
+  Main Contract Daily (hc2610): OK
+  Main Contract 2-Hour (hc2610): SKIPPED (not in 2H test list)
+
+[25/70] Syncing I (铁矿石) | Sector: 黑色建材
+  Continuous Daily (I0): OK
+  Continuous 2-Hour (I0): SKIPPED (not in 2H test list)
+  Current Main Contract: i2609
+  Main Contract Daily (i2609): OK
+  Main Contract 2-Hour (i2609): SKIPPED (not in 2H test list)
+
+[26/70] Syncing J (冶金焦炭) | Sector: 黑色建材
+  Continuous Daily (J0): OK
+  Continuous 2-Hour (J0): SKIPPED (not in 2H test list)
+  Current Main Contract: j2609
+  Main Contract Daily (j2609): OK
+  Main Contract 2-Hour (j2609): SKIPPED (not in 2H test list)
+
+[27/70] Syncing JD (鸡蛋) | Sector: 农产品
+  Continuous Daily (JD0): OK
+  Continuous 2-Hour (JD0): SKIPPED (not in 2H test list)
+  Current Main Contract: jd2608
+  Main Contract Daily (jd2608): OK
+  Main Contract 2-Hour (jd2608): SKIPPED (not in 2H test list)
+
+[28/70] Syncing JM (焦煤) | Sector: 黑色建材
+  Continuous Daily (JM0): OK
+  Continuous 2-Hour (JM0): SKIPPED (not in 2H test list)
+  Current Main Contract: jm2609
+  Main Contract Daily (jm2609): OK
+  Main Contract 2-Hour (jm2609): SKIPPED (not in 2H test list)
+
+[29/70] Syncing L (线型低密度聚乙烯) | Sector: 能源化工
+  Continuous Daily (L0): OK
+  Continuous 2-Hour (L0): SKIPPED (not in 2H test list)
+  Current Main Contract: l2609
+  Main Contract Daily (l2609): OK
+  Main Contract 2-Hour (l2609): SKIPPED (not in 2H test list)
+
+[30/70] Syncing LC (碳酸锂) | Sector: 新能源
+  Continuous Daily (LC0): OK
+  Continuous 2-Hour (LC0): OK
+  Current Main Contract: lc2609
+  Main Contract Daily (lc2609): OK
+  Main Contract 2-Hour (lc2609): OK
+
+[31/70] Syncing LG (原木) | Sector: 航运轻工
+  Continuous Daily (LG0): OK
+  Continuous 2-Hour (LG0): SKIPPED (not in 2H test list)
+  Current Main Contract: lg2609
+  Main Contract Daily (lg2609): OK
+  Main Contract 2-Hour (lg2609): SKIPPED (not in 2H test list)
+
+[32/70] Syncing LH (生猪) | Sector: 农产品
+  Continuous Daily (LH0): OK
+  Continuous 2-Hour (LH0): SKIPPED (not in 2H test list)
+  Current Main Contract: lh2609
+  Main Contract Daily (lh2609): OK
+  Main Contract 2-Hour (lh2609): SKIPPED (not in 2H test list)
+
+[33/70] Syncing LU (低硫燃料油) | Sector: 能源化工
+  Continuous Daily (LU0): OK
+  Continuous 2-Hour (LU0): SKIPPED (not in 2H test list)
+  Current Main Contract: lu2608
+  Main Contract Daily (lu2608): OK
+  Main Contract 2-Hour (lu2608): SKIPPED (not in 2H test list)
+
+[34/70] Syncing M (豆粕) | Sector: 油脂油料
+  Continuous Daily (M0): OK
+  Continuous 2-Hour (M0): SKIPPED (not in 2H test list)
+  Current Main Contract: m2609
+  Main Contract Daily (m2609): OK
+  Main Contract 2-Hour (m2609): SKIPPED (not in 2H test list)
+
+[35/70] Syncing MA (甲醇N) | Sector: 能源化工
+  Continuous Daily (MA0): OK
+  Continuous 2-Hour (MA0): SKIPPED (not in 2H test list)
+  Current Main Contract: MA609
+  Main Contract Daily (MA609): OK
+  Main Contract 2-Hour (MA609): SKIPPED (not in 2H test list)
+
+[36/70] Syncing NI (镍) | Sector: 有色金属
+  Continuous Daily (NI0): OK
+  Continuous 2-Hour (NI0): SKIPPED (not in 2H test list)
+  Current Main Contract: ni2609
+  Main Contract Daily (ni2609): OK
+  Main Contract 2-Hour (ni2609): SKIPPED (not in 2H test list)
+
+[37/70] Syncing NR (20号胶) | Sector: 农产品
+  Continuous Daily (NR0): OK
+  Continuous 2-Hour (NR0): SKIPPED (not in 2H test list)
+  Current Main Contract: nr2609
+  Main Contract Daily (nr2609): OK
+  Main Contract 2-Hour (nr2609): SKIPPED (not in 2H test list)
+
+[38/70] Syncing OI (菜籽油) | Sector: 油脂油料
+  Continuous Daily (OI0): OK
+  Continuous 2-Hour (OI0): SKIPPED (not in 2H test list)
+  Current Main Contract: OI609
+  Main Contract Daily (OI609): OK
+  Main Contract 2-Hour (OI609): SKIPPED (not in 2H test list)
+
+[39/70] Syncing OP (胶版纸) | Sector: 航运轻工
+  Continuous Daily (OP0): OK
+  Continuous 2-Hour (OP0): SKIPPED (not in 2H test list)
+  Current Main Contract: op2609
+  Main Contract Daily (op2609): OK
+  Main Contract 2-Hour (op2609): SKIPPED (not in 2H test list)
+
+[40/70] Syncing P (棕榈油) | Sector: 油脂油料
+  Continuous Daily (P0): OK
+  Continuous 2-Hour (P0): SKIPPED (not in 2H test list)
+  Current Main Contract: p2609
+  Main Contract Daily (p2609): OK
+  Main Contract 2-Hour (p2609): SKIPPED (not in 2H test list)
+
+[41/70] Syncing PB (铅) | Sector: 有色金属
+  Continuous Daily (PB0): OK
+  Continuous 2-Hour (PB0): SKIPPED (not in 2H test list)
+  Current Main Contract: pb2608
+  Main Contract Daily (pb2608): OK
+  Main Contract 2-Hour (pb2608): SKIPPED (not in 2H test list)
+
+[42/70] Syncing PD (钯) | Sector: 贵金属
+  Continuous Daily (PD0): OK
+  Continuous 2-Hour (PD0): SKIPPED (not in 2H test list)
+  Current Main Contract: pd2608
+  Main Contract Daily (pd2608): OK
+  Main Contract 2-Hour (pd2608): SKIPPED (not in 2H test list)
+
+[43/70] Syncing PF (短纤) | Sector: 能源化工
+  Continuous Daily (PF0): OK
+  Continuous 2-Hour (PF0): SKIPPED (not in 2H test list)
+  Current Main Contract: PF608
+  Main Contract Daily (PF608): OK
+  Main Contract 2-Hour (PF608): SKIPPED (not in 2H test list)
+
+[44/70] Syncing PG (液化石油气) | Sector: 能源化工
+  Continuous Daily (PG0): OK
+  Continuous 2-Hour (PG0): SKIPPED (not in 2H test list)
+  Current Main Contract: pg2608
+  Main Contract Daily (pg2608): OK
+  Main Contract 2-Hour (pg2608): SKIPPED (not in 2H test list)
+
+[45/70] Syncing PK (花生仁) | Sector: 油脂油料
+  Continuous Daily (PK0): OK
+  Continuous 2-Hour (PK0): SKIPPED (not in 2H test list)
+  Current Main Contract: PK610
+  Main Contract Daily (PK610): OK
+  Main Contract 2-Hour (PK610): SKIPPED (not in 2H test list)
+
+[46/70] Syncing PL (丙烯) | Sector: 能源化工
+  Continuous Daily (PL0): OK
+  Continuous 2-Hour (PL0): SKIPPED (not in 2H test list)
+  Current Main Contract: PL609
+  Main Contract Daily (PL609): OK
+  Main Contract 2-Hour (PL609): SKIPPED (not in 2H test list)
+
+[47/70] Syncing PP (聚丙烯) | Sector: 能源化工
+  Continuous Daily (PP0): OK
+  Continuous 2-Hour (PP0): SKIPPED (not in 2H test list)
+  Current Main Contract: pp2609
+  Main Contract Daily (pp2609): OK
+  Main Contract 2-Hour (pp2609): SKIPPED (not in 2H test list)
+
+[48/70] Syncing PR (瓶片) | Sector: 能源化工
+  Continuous Daily (PR0): OK
+  Continuous 2-Hour (PR0): SKIPPED (not in 2H test list)
+  Current Main Contract: PR609
+  Main Contract Daily (PR609): OK
+  Main Contract 2-Hour (PR609): SKIPPED (not in 2H test list)
+
+[49/70] Syncing PS (多晶硅) | Sector: 新能源
+  Continuous Daily (PS0): OK
+  Continuous 2-Hour (PS0): SKIPPED (not in 2H test list)
+  Current Main Contract: ps2609
+  Main Contract Daily (ps2609): OK
+  Main Contract 2-Hour (ps2609): SKIPPED (not in 2H test list)
+
+[50/70] Syncing PT (铂) | Sector: 贵金属
+  Continuous Daily (PT0): OK
+  Continuous 2-Hour (PT0): SKIPPED (not in 2H test list)
+  Current Main Contract: pt2608
+  Main Contract Daily (pt2608): OK
+  Main Contract 2-Hour (pt2608): SKIPPED (not in 2H test list)
+
+[51/70] Syncing PX (对二甲苯) | Sector: 能源化工
+  Continuous Daily (PX0): OK
+  Continuous 2-Hour (PX0): SKIPPED (not in 2H test list)
+  Current Main Contract: PX609
+  Main Contract Daily (PX609): OK
+  Main Contract 2-Hour (PX609): SKIPPED (not in 2H test list)
+
+[52/70] Syncing RB (螺纹钢) | Sector: 黑色建材
+  Continuous Daily (RB0): OK
+  Continuous 2-Hour (RB0): OK
+  Current Main Contract: rb2610
+  Main Contract Daily (rb2610): OK
+  Main Contract 2-Hour (rb2610): OK
+
+[53/70] Syncing RM (菜籽粕) | Sector: 油脂油料
+  Continuous Daily (RM0): OK
+  Continuous 2-Hour (RM0): SKIPPED (not in 2H test list)
+  Current Main Contract: RM609
+  Main Contract Daily (RM609): OK
+  Main Contract 2-Hour (RM609): SKIPPED (not in 2H test list)
+
+[54/70] Syncing RR (粳米) | Sector: 农产品
+  Continuous Daily (RR0): OK
+  Continuous 2-Hour (RR0): SKIPPED (not in 2H test list)
+  Current Main Contract: rr2608
+  Main Contract Daily (rr2608): OK
+  Main Contract 2-Hour (rr2608): SKIPPED (not in 2H test list)
+
+[55/70] Syncing RU (天然橡胶) | Sector: 农产品
+  Continuous Daily (RU0): OK
+  Continuous 2-Hour (RU0): SKIPPED (not in 2H test list)
+  Current Main Contract: ru2609
+  Main Contract Daily (ru2609): OK
+  Main Contract 2-Hour (ru2609): SKIPPED (not in 2H test list)
+
+[56/70] Syncing SA (纯碱) | Sector: 黑色建材
+  Continuous Daily (SA0): OK
+  Continuous 2-Hour (SA0): SKIPPED (not in 2H test list)
+  Current Main Contract: SA609
+  Main Contract Daily (SA609): OK
+  Main Contract 2-Hour (SA609): SKIPPED (not in 2H test list)
+
+[57/70] Syncing SC (原油) | Sector: 能源化工
+  Continuous Daily (SC0): OK
+  Continuous 2-Hour (SC0): OK
+  Current Main Contract: sc2608
+  Main Contract Daily (sc2608): OK
+  Main Contract 2-Hour (sc2608): OK
+
+[58/70] Syncing SF (硅铁) | Sector: 黑色建材
+  Continuous Daily (SF0): OK
+  Continuous 2-Hour (SF0): SKIPPED (not in 2H test list)
+  Current Main Contract: SF609
+  Main Contract Daily (SF609): OK
+  Main Contract 2-Hour (SF609): SKIPPED (not in 2H test list)
+
+[59/70] Syncing SH (烧碱) | Sector: 能源化工
+  Continuous Daily (SH0): OK
+  Continuous 2-Hour (SH0): SKIPPED (not in 2H test list)
+  Current Main Contract: SH609
+  Main Contract Daily (SH609): OK
+  Main Contract 2-Hour (SH609): SKIPPED (not in 2H test list)
+
+[60/70] Syncing SI (工业硅) | Sector: 新能源
+  Continuous Daily (SI0): OK
+  Continuous 2-Hour (SI0): SKIPPED (not in 2H test list)
+  Current Main Contract: si2609
+  Main Contract Daily (si2609): OK
+  Main Contract 2-Hour (si2609): SKIPPED (not in 2H test list)
+
+[61/70] Syncing SM (锰硅) | Sector: 黑色建材
+  Continuous Daily (SM0): OK
+  Continuous 2-Hour (SM0): SKIPPED (not in 2H test list)
+  Current Main Contract: SM609
+  Main Contract Daily (SM609): OK
+  Main Contract 2-Hour (SM609): SKIPPED (not in 2H test list)
+
+[62/70] Syncing SN (锡) | Sector: 有色金属
+  Continuous Daily (SN0): OK
+  Continuous 2-Hour (SN0): SKIPPED (not in 2H test list)
+  Current Main Contract: sn2608
+  Main Contract Daily (sn2608): OK
+  Main Contract 2-Hour (sn2608): SKIPPED (not in 2H test list)
+
+[63/70] Syncing SP (漂针浆) | Sector: 航运轻工
+  Continuous Daily (SP0): OK
+  Continuous 2-Hour (SP0): SKIPPED (not in 2H test list)
+  Current Main Contract: sp2609
+  Main Contract Daily (sp2609): OK
+  Main Contract 2-Hour (sp2609): SKIPPED (not in 2H test list)
+
+[64/70] Syncing SR (白砂糖) | Sector: 农产品
+  Continuous Daily (SR0): OK
+  Continuous 2-Hour (SR0): SKIPPED (not in 2H test list)
+  Current Main Contract: SR609
+  Main Contract Daily (SR609): OK
+  Main Contract 2-Hour (SR609): SKIPPED (not in 2H test list)
+
+[65/70] Syncing SS (不锈钢) | Sector: 有色金属
+  Continuous Daily (SS0): OK
+  Continuous 2-Hour (SS0): SKIPPED (not in 2H test list)
+  Current Main Contract: ss2608
+  Main Contract Daily (ss2608): OK
+  Main Contract 2-Hour (ss2608): SKIPPED (not in 2H test list)
+
+[66/70] Syncing TA (精对苯二甲酸) | Sector: 能源化工
+  Continuous Daily (TA0): OK
+  Continuous 2-Hour (TA0): SKIPPED (not in 2H test list)
+  Current Main Contract: TA609
+  Main Contract Daily (TA609): OK
+  Main Contract 2-Hour (TA609): SKIPPED (not in 2H test list)
+
+[67/70] Syncing UR (尿素) | Sector: 能源化工
+  Continuous Daily (UR0): OK
+  Continuous 2-Hour (UR0): SKIPPED (not in 2H test list)
+  Current Main Contract: UR609
+  Main Contract Daily (UR609): OK
+  Main Contract 2-Hour (UR609): SKIPPED (not in 2H test list)
+
+[68/70] Syncing V (聚氯乙烯) | Sector: 能源化工
+  Continuous Daily (V0): OK
+  Continuous 2-Hour (V0): SKIPPED (not in 2H test list)
+  Current Main Contract: v2609
+  Main Contract Daily (v2609): OK
+  Main Contract 2-Hour (v2609): SKIPPED (not in 2H test list)
+
+[69/70] Syncing Y (豆油) | Sector: 油脂油料
+  Continuous Daily (Y0): OK
+  Continuous 2-Hour (Y0): SKIPPED (not in 2H test list)
+  Current Main Contract: y2609
+  Main Contract Daily (y2609): OK
+  Main Contract 2-Hour (y2609): SKIPPED (not in 2H test list)
+
+[70/70] Syncing ZN (锌) | Sector: 有色金属
+  Continuous Daily (ZN0): OK
+  Continuous 2-Hour (ZN0): SKIPPED (not in 2H test list)
+  Current Main Contract: zn2608
+  Main Contract Daily (zn2608): OK
+  Main Contract 2-Hour (zn2608): SKIPPED (not in 2H test list)
+
+Sync complete. Synced 70 active commodity symbols in 154.0s (2.6min).
+Generating HTML report...
+Report successfully saved to: D:\datasci\PNL_Tracker\reports\daily_report_2026-06-30.html
+[2026-06-30 20:51:25.699443] Daily job completed.
+[2026/06/30 �ܶ� 20:51:25.87] Done. 

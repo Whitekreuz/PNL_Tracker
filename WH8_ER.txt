@@ -1,0 +1,21 @@
+// Kaufman's Efficiency Ratio (ER) 效率系数指标
+// 用于判断市场处于震荡还是趋势状态。值接近 1 代表强趋势，值接近 0 代表震荡。
+// 建议在文华财经 (WH8) 中设置为副图指标
+
+// 属性设置中定义的参数：
+// N1 (默认值: 20, 最小值: 2, 最大值: 200) - 长周期回溯值
+// N2 (默认值: 5,  最小值: 2, 最大值: 200) - 短周期回溯值
+
+// ================== N1周期的效率系数 (ER_20) ==================
+DIFF1:=ABS(CLOSE-REF(CLOSE,N1));                 // N1周期内的收盘价净变动绝对值
+VOLSUM1:=SUM(ABS(CLOSE-REF(CLOSE,1)),N1);        // N1周期内每日收盘价波动的总和
+ER_LONG:IF(VOLSUM1>0, DIFF1/VOLSUM1, 0),COLORRED,LINETHICK2; // 长周期ER线，红色粗线
+
+// ================== N2周期的效率系数 (ER_5) ==================
+DIFF2:=ABS(CLOSE-REF(CLOSE,N2));                 // N2周期内的收盘价净变动绝对值
+VOLSUM2:=SUM(ABS(CLOSE-REF(CLOSE,1)),N2);        // N2周期内每日收盘价波动的总和
+ER_SHORT:IF(VOLSUM2>0, DIFF2/VOLSUM2, 0),COLORBLUE; // 短周期ER线，蓝色细线
+
+// ================== 参考阈值水平线 ==================
+THRESHOLD_LOW:0.3,COLORGRAY,DOT;                 // 0.3以下通常视为极度震荡区
+THRESHOLD_HIGH:0.6,COLORGRAY,DOT;                // 0.6以上通常视为极强趋势区
